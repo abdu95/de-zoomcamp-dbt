@@ -29,7 +29,7 @@ renamed as (
         cast(ehail_fee as numeric) as ehail_fee,
         cast(improvement_surcharge as numeric) as improvement_surcharge,
         cast(total_amount as numeric) as total_amount,
-        cast(payment_type as integer) as payment_type
+        {{ get_payment_type('payment_type') }} AS payment_type
     from source
     -- Filter out records with null vendor_id (data quality requirement)
     where vendorid is not null
