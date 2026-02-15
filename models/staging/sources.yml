@@ -1,0 +1,11 @@
+version: 2
+
+sources: 
+  - name: raw_data
+    database: mod-04-analytics
+    description: "Raw data sources for NYC taxi rides"
+    schema: nytaxi 
+    tables: 
+      - name: yellow_tripdata
+      - name: green_tripdata
+
